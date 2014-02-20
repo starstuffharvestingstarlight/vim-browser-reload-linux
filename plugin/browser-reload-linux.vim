@@ -1,4 +1,4 @@
-    "=========================================================
+"=========================================================
 " File:        browser-reload-linux.vim
 " Author:      sp4ke <chakib.benz[at]gmail.com>
 " Last Change: 1-Jun-2013.
@@ -57,8 +57,8 @@ command! -bar OperaReloadStart OperaReloadStop | autocmd BufWritePost <buffer> O
 command! -bar OperaReloadStop autocmd! BufWritePost <buffer>
 
 " Iceweasel
-command! -bar IceweaselReload call s:ReloadBrowser("Iceweasel")
-command! -bar IceweaselReloadStart IceweaselReloadStop | autocmd BufWritePost <buffer> IceweaselReload
+command! -nargs=? -bar IceweaselReload call s:ReloadBrowser("Iceweasel", <f-args>)
+command! -nargs=? -bar IceweaselReloadStart IceweaselReloadStop | autocmd BufWritePost <buffer> IceweaselReload <args>
 command! -bar IceweaselReloadStop autocmd! BufWritePost <buffer>
 
 " All Browsers
